@@ -1,0 +1,40 @@
+.services{
+    display: flex;
+    flex-wrap: wrap;
+    margin: 80px auto;
+    width: 90%;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.services-text {
+    width: 100%;
+    font-size: 30px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 40px;
+}
+
+.service img{
+    display: block;
+    width: 300px;
+    height: 300px;
+    border-radius: 10%;
+    object-fit: cover;
+}
+
+.service {
+    flex-basis: 30%;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.service p{
+    margin: 10px 0;
+    font-size: 18px;
+    line-height: 1.4;
+}
