@@ -6,11 +6,16 @@
     box-sizing: border-box;
     font-family: "Ubuntu", serif;
     font-style: normal;
+    
 }
 
 body{
     font-family: Arial, sans-serif;
     background: #fff;
+}
+
+html{
+    scroll-behavior: smooth;
 }
 
 li{
@@ -37,4 +42,18 @@ li{
     outline: 0;
     align-items: center;
     justify-content: center;
+}
+.header-underline {
+    width: 60px;
+    height: 3px;
+    background: #e63946;
+    margin: 0 auto;
+}
+
+.section-underline {
+    width: 80%;
+    height: .1rem;
+    background: #999999;
+    margin: 0 auto;
+    margin-top: 6%;
 }

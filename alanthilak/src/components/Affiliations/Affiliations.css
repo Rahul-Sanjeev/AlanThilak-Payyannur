@@ -1,0 +1,88 @@
+/* Affiliations.css */
+.affiliations-container {
+    padding: 80px 20px;
+    background: #f9f9f9;
+}
+
+.affiliations-header {
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.affiliations-header h1 {
+    font-size: 2.8rem;
+    color: #2a2a2a;
+    margin-bottom: 1rem;
+    position: relative;
+    display: inline-block;
+    font-family: "Monda", sans-serif;
+    font-weight: 700;
+}
+
+.affiliations-header h1::after {
+    content: '';
+    position: absolute;
+    bottom: -15px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 4px;
+    background: #e63946;
+    border-radius: 2px;
+    transition: width 0.3s ease;
+}
+
+.affiliations-header h1:hover::after {
+    width: 120px;
+}
+
+.affiliations-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 40px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.affiliation-item {
+    background: white;
+    border-radius: 12px;
+    padding: 30px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.affiliation-item:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.12);
+}
+
+.affiliation-item img {
+    width: 100%;
+    max-width: 180px;
+    height: auto;
+    filter: grayscale(0%);
+    transition: filter 0.3s ease;
+}
+
+.affiliation-item:hover img {
+    filter: grayscale(100%);
+}
+
+@media (max-width: 768px) {
+    .affiliations-header h1 {
+        font-size: 2.2rem;
+    }
+
+    .affiliations-grid {
+        gap: 25px;
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    }
+
+    .affiliation-item {
+        padding: 20px;
+    }
+}

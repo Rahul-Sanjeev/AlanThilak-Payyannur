@@ -1,0 +1,251 @@
+.about-section {
+    padding: 80px 0;
+    background: #f8f9fa;
+}
+
+.about-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.about-header {
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.about-header h2 {
+    font-size: 2.8rem;
+    color: #2a2a2a;
+    margin-bottom: 1rem;
+    font-family: "Monda", sans-serif;
+    font-weight: 700;
+}
+
+.title-underline {
+    width: 100px;
+    height: 4px;
+    background: #e63946;
+    margin: 0 auto 30px;
+}
+
+/* Founder Section */
+.founder-section {
+    display: flex;
+    gap: 40px;
+    align-items: center;
+    margin-bottom: 60px;
+}
+
+.founder-image {
+    flex: 1;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.founder-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.founder-details {
+    flex: 1;
+}
+
+.founder-details h3 {
+    font-size: 2rem;
+    color: #2a2a2a;
+    margin-bottom: 10px;
+    font-family: "Monda", sans-serif;
+    font-weight: 600;
+}
+
+.founder-title {
+    color: #e63946;
+    font-size: 1.1rem;
+    margin-bottom: 20px;
+    font-weight: 500;
+}
+
+.founder-description {
+    color: #666;
+    line-height: 1.8;
+    font-size: 1rem;
+}
+
+/* Stats Section */
+.stats-section {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    margin-bottom: 60px;
+}
+
+.stat-item {
+    background: white;
+    padding: 30px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.stat-item:hover {
+    transform: translateY(-10px);
+}
+
+.stat-number {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #e63946;
+    margin-bottom: 10px;
+}
+
+.stat-label {
+    color: #666;
+    font-size: 1rem;
+}
+
+/* Training Section */
+.training-section {
+    display: flex;
+    gap: 40px;
+    align-items: center;
+    margin-bottom: 60px;
+}
+
+.training-content {
+    flex: 1;
+}
+
+.training-content h3 {
+    font-size: 2rem;
+    color: #2a2a2a;
+    margin-bottom: 20px;
+    font-family: "Monda", sans-serif;
+    font-weight: 600;
+}
+
+.training-content p {
+    color: #666;
+    line-height: 1.8;
+    margin-bottom: 20px;
+}
+
+.training-content ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+.training-content li {
+    margin-bottom: 10px;
+    padding-left: 25px;
+    position: relative;
+    color: #666;
+}
+
+.training-content li::before {
+    content: "▹";
+    position: absolute;
+    left: 0;
+    color: #e63946;
+}
+
+.training-image {
+    flex: 1;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.training-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Global Section */
+.global-section {
+    display: flex;
+    gap: 40px;
+    align-items: center;
+    margin-bottom: 60px;
+}
+
+.global-image {
+    flex: 1;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.global-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.global-content {
+    flex: 1;
+}
+
+.global-content h3 {
+    font-size: 2rem;
+    color: #2a2a2a;
+    margin-bottom: 20px;
+    font-family: "Monda", sans-serif;
+    font-weight: 600;
+}
+
+.global-content p {
+    color: #666;
+    line-height: 1.8;
+}
+
+/* Call to Action */
+.cta-section {
+    text-align: center;
+    margin-top: 40px;
+}
+
+.cta-button {
+    background: #e63946;
+    color: white;
+    padding: 15px 40px;
+    border: none;
+    border-radius: 30px;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.cta-button:hover {
+    background: #d62828;
+    transform: translateY(-3px);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+
+    .founder-section,
+    .training-section,
+    .global-section {
+        flex-direction: column;
+    }
+
+    .stats-section {
+        grid-template-columns: 1fr;
+    }
+
+    .founder-image,
+    .training-image,
+    .global-image {
+        width: 100%;
+    }
+
+    .about-header h2 {
+        font-size: 2.2rem;
+    }
+}
