@@ -21,6 +21,7 @@ const About = () => {
                         </div>
                         <div className="founder-details">
                             <h3>Founder: Dai Sensei Moses Thilak</h3>
+                            <p className="founder-description">Alan Thilak Karate School International, Kerala Karate Association</p>
                             <p className="founder-title">9th Dan Black Belt, International Referee</p>
                             <p className="founder-description">
                                 A visionary in martial arts, Dai Sensei Moses Thilak established the Alan Thilak Karate School in 1975. His dedication to preserving traditional Shito-Ryu while adapting it for modern practitioners has made the school a global leader in karate training.
@@ -78,6 +79,7 @@ const About = () => {
 
                     {/* Call to Action */}
                     <div className="cta-section">
+                        <p>Learn more about our <a href="#leadership" className="cta-link">leadership team</a>.</p>
                         <button className="cta-button">Join Our Legacy</button>
                     </div>
                 </div>

@@ -24,14 +24,19 @@ const Navbar = () => {
                         About
                     </Link>
                 </li>
-                <li>
+                {/* <li>
                     <Link activeClass="active" to="affiliations" spy={true} smooth={true} offset={-70} duration={500}>
                         Affiliations
                     </Link>
-                </li>
+                </li> */}
                 <li>
                     <Link activeClass="active" to="services" spy={true} smooth={true} offset={-70} duration={500}>
                         Services
+                    </Link>
+                </li>
+                <li>
+                    <Link activeClass="active" to="branches" spy={true} smooth={true} offset={-70} duration={500}>
+                        Branches
                     </Link>
                 </li>
                 <li>
