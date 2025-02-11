@@ -1,4 +1,3 @@
-import React from 'react';
 import './Leadership.css';
 import NielThilak from './Images/niel-moses.png'; 
 import SunilKumar from './Images/sunil-kumar.png'; 
@@ -58,9 +57,9 @@ const Leadership = () => {
                         </div>
                         <div className="leader-details">
                             <h3>Anjana P Kumar</h3>
-                            <p className="leader-title">Technical Director</p>
+                            <p className="leader-title">Cheif Instructor</p>
                             <ul className="leader-achievements">
-                                <li>4th Dan Black Belt ShitoRyu</li>
+                                <li>5th Dan Black Belt ShitoRyu</li>
                                 <li>AKF Coach</li>
                                 <li>Vice President, Kerala Karate Association</li>
                                 <li>Directing Committee Member, Kobe Osaka India</li>
@@ -75,11 +74,10 @@ const Leadership = () => {
                         </div>
                         <div className="leader-details">
                             <h3>Anand Maniyeri</h3>
-                            <p className="leader-title">Technical Director</p>
+                            <p className="leader-title">Team Coach</p>
                             <ul className="leader-achievements">
-                                <li>7th Dan Black Belt ShitoRyu</li>
-                                <li>6th Dan Black Belt WKF</li>
-                                <li>WKF Judge</li>
+                                <li>4th Dan Black Belt ShitoRyu</li>
+                                <li>KKA Coach</li>
                                 <li>Vice President, Kerala Karate Association</li>
                                 <li>Directing Committee Member, Kobe Osaka India</li>
                                 <li>Hanshi Thilak Ha ShitoRyu</li>
@@ -88,6 +86,7 @@ const Leadership = () => {
                     </div>
                 </div>
             </div>
+            <div className="section-underline"></div>
         </section>
     );
 };

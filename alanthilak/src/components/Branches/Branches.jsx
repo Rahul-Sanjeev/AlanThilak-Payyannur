@@ -1,4 +1,3 @@
-import React from 'react';
 import './Branches.css';
 import { FaMapMarkerAlt } from 'react-icons/fa';
 
@@ -61,6 +60,7 @@ const Branches = () => {
                     ))}
                 </div>
             </div>
+            <div className="section-underline"></div>
         </section>
     );
 };

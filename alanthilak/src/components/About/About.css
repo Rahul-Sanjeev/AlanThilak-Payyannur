@@ -39,10 +39,11 @@
 
 .founder-image {
     flex: 1;
-    max-width: 400px;
+    max-width: 30vw;
     border-radius: 15px;
     overflow: hidden;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    height: 70vh;
 }
 
 .founder-image img {
@@ -58,6 +59,13 @@
 .founder-details h3 {
     font-size: 2rem;
     color: #2a2a2a;
+    margin-bottom: 10px;
+    font-family: "Monda", sans-serif;
+    font-weight: 600;
+}
+.founder-details h6 {
+    font-size: .9rem;
+    color: #1b1bb1;
     margin-bottom: 10px;
     font-family: "Monda", sans-serif;
     font-weight: 600;
@@ -159,6 +167,7 @@
     border-radius: 15px;
     overflow: hidden;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    height: 50vh;
 }
 
 .training-image img {
@@ -180,6 +189,7 @@
     border-radius: 15px;
     overflow: hidden;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    height: 50vh;
 }
 
 .global-image img {
@@ -209,6 +219,11 @@
 .cta-section {
     text-align: center;
     margin-top: 40px;
+}
+.cta-section p{
+    font-size: 1.4rem;
+    color: #666;
+    margin-bottom: 30px;
 }
 
 .cta-button {

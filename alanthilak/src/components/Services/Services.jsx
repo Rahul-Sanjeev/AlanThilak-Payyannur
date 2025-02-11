@@ -1,4 +1,3 @@
-import React from 'react'
 import './Services.css'
 import Kata from './Images/kata.jpg'
 import Kumite from './Images/kumite.jpg'

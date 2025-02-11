@@ -52,8 +52,7 @@ li{
 
 .section-underline {
     width: 80%;
-    height: .1rem;
-    background: #999999;
-    margin: 0 auto;
-    margin-top: 6%;
+    height: 2px;
+    background: #eee;
+    margin: 40px auto 0;
 }

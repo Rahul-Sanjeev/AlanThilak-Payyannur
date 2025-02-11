@@ -1,5 +1,3 @@
-// Navbar.jsx
-import React from 'react';
 import { Link } from 'react-scroll';
 import './Navbar.css';
 import Logo from '../../assets/ATKSI-Logo.svg';
@@ -40,13 +38,13 @@ const Navbar = () => {
                     </Link>
                 </li>
                 <li>
-                    <Link activeClass="active" to="socials" spy={true} smooth={true} offset={-70} duration={500}>
-                        Socials
+                    <Link activeClass="active" to="gallery" spy={true} smooth={true} offset={-70} duration={500}>
+                        Gallery
                     </Link>
                 </li>
 
                 <li>
-                    <Link activeClass="active" to="contact" spy={true} smooth={true} offset={-70} duration={500}>
+                    <Link activeClass="active" to="socials" spy={true} smooth={true} offset={-70} duration={500}>
                         <button className="btn">Contact</button>
                     </Link>
                 </li>

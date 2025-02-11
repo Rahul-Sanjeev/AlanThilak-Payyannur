@@ -1,4 +1,3 @@
-import React from 'react';
 import './Footer.css';
 import { Link } from 'react-scroll';
 import { FaMapMarkerAlt, FaPhone, FaEnvelope, FaGithub, FaLinkedin, FaInstagram } from 'react-icons/fa';

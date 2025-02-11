@@ -1,4 +1,5 @@
-import React, { useState, useEffect } from 'react'
+import { useState, useEffect } from 'react'
+import { Link } from 'react-scroll';
 import './Hero.css'
 import down_arrow from '../../assets/down_arrow.png'
 
@@ -46,7 +47,7 @@ const Hero = () => {
                 <div className='hero-text'>
                     <h1>Welcome to Alan Thilak Karate School International Payyanur</h1>
                     <p>Empowering students with discipline, confidence, and world-class karate training. Join us to master the art of self-defense and unlock your true potential</p>
-                    <button className='btn'>Know More <img src={ down_arrow } alt="down_arrow" className='down_arrow'/> </button>
+                    <button className='btn'> <Link activeClass="active" to="about" spy={true} smooth={true} offset={-70} duration={500}> Know More </Link><img src={down_arrow} alt="down_arrow" className='down_arrow' /></button>
                 </div>
             </div>
         </>
