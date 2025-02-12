@@ -7,7 +7,7 @@ import Self_Defense from './Images/self-defense.jpg'
 const Services = () => {
     return (
         <div id='services' className="services-container">
-            <div className='services-header'>
+            <div className='header'>
                 <h1>Our Services</h1>
                 <div className="header-underline"></div>
             </div>

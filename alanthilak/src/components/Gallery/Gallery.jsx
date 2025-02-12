@@ -37,15 +37,14 @@ const Gallery = () => {
         if (images.length === 0) return;
         const interval = setInterval(() => {
             updateDisplayedImages(images);
-        }, 2000);
+        }, 3000);
         return () => clearInterval(interval);
     }, [images]);
 
     return (
         <section id="gallery" className="gallery-section">
-            <div className="gallery-container container">
-                <h2 className="section-title">Our Hall Of Fame</h2>
-                <div className="title-underline"></div>
+            <div className="gallery-container header container">
+                <h1>Our Hall Of Fame</h1>
                 <p className="section-subtitle">
                     Explore moments from our dojo, competitions, and training sessions.
                 </p>

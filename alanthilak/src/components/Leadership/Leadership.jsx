@@ -7,9 +7,8 @@ import Anand from './Images/anand-maniyeri.png'
 const Leadership = () => {
     return (
         <section id="leadership" className="leadership-section">
-            <div className="leadership-container container">
-                <h2 className="section-title">Our Leadership</h2>
-                <div className="title-underline"></div>
+            <div className="leadership-container header container">
+                <h1>Our Leadership</h1>
                 <p className="section-subtitle">Meet the dedicated team guiding Alan Thilak Karate School to excellence.</p>
 
                 <div className="leadership-grid">

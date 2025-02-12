@@ -4,8 +4,8 @@ import { FaFacebook, FaInstagram, FaYoutube } from 'react-icons/fa';
 const Socials = () => {
     return (
         <section id="socials" className="socials-section">
-            <div className="socials-container container">
-                <h2 className="section-title">Connect With Us</h2>
+            <div className="socials-container header container">
+                <h1>Connect With Us</h1>
                 <p className="section-subtitle">Follow us on social media for updates, events, and more!</p>
 
                 <div className="social-icons">

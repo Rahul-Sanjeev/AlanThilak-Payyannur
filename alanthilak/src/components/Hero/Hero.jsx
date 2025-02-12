@@ -47,7 +47,7 @@ const Hero = () => {
                 <div className='hero-text'>
                     <h1>Welcome to Alan Thilak Karate School International Payyanur</h1>
                     <p>Empowering students with discipline, confidence, and world-class karate training. Join us to master the art of self-defense and unlock your true potential</p>
-                    <button className='btn'> <Link activeClass="active" to="about" spy={true} smooth={true} offset={-70} duration={500}> Know More </Link><img src={down_arrow} alt="down_arrow" className='down_arrow' /></button>
+                    <Link activeClass="active" to="about" spy={true} smooth={true} offset={-70} duration={500}><button className='btn'> Know More <img src={down_arrow} alt="down_arrow" className='down_arrow' /></button></Link>
                 </div>
             </div>
         </>

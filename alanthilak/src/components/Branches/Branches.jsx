@@ -41,8 +41,8 @@ const Branches = () => {
 
     return (
         <section id="branches" className="branches-section">
-            <div className="branches-container container">
-                <h2 className="section-title">Our Branches</h2>
+            <div className="branches-container header container">
+                <h1>Our Branches</h1>
                 <p className="section-subtitle">Find a dojo near you and join our karate family!</p>
 
                 <div className="branches-grid">

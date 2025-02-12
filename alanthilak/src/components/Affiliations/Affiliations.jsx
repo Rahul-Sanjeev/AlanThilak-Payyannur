@@ -8,7 +8,7 @@ import KSSCLogo from './Images/Kerala state sports council.png'
 const Affiliations = () => {
     return (
         <section id='affiliations' className="affiliations-container">
-            <div className="affiliations-header">
+            <div className="header">
                 <h1>Our Affiliations</h1>
             </div>
 

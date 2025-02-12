@@ -39,6 +39,8 @@
     max-width: 800px;
     color: #fff;
     padding-top: 45vh;
+    align-items: center;
+    justify-content: center;
 }
 
 .hero-text h1 {
