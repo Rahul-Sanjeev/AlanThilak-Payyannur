@@ -24,7 +24,7 @@ const Hero = () => {
     useEffect(() => {
         const interval = setInterval(() => {
             setCurrentSlide(prev => (prev + 1) % slides.length)
-        }, 5000) // Change slide every 5 seconds
+        }, 2000) // Change slide every 5 seconds
 
         return () => clearInterval(interval)
     }, [slides.length])
@@ -47,7 +47,22 @@ const Hero = () => {
                 <div className='hero-text'>
                     <h1>Welcome to Alan Thilak Karate School International Payyanur</h1>
                     <p>Empowering students with discipline, confidence, and world-class karate training. Join us to master the art of self-defense and unlock your true potential</p>
-                    <Link activeClass="active" to="about" spy={true} smooth={true} offset={-70} duration={500}><button className='btn'> Know More <img src={down_arrow} alt="down_arrow" className='down_arrow' /></button></Link>
+                    <Link
+                        activeClass="active"
+                        to="about"
+                        spy={true}
+                        smooth={true}
+                        offset={-70}
+                        duration={500}>
+                        <button
+                            className='btn'>
+                            Know More
+                            <img
+                                src={down_arrow}
+                                alt="down_arrow"
+                                className='down_arrow' />
+                        </button>
+                    </Link>
                 </div>
             </div>
         </>
