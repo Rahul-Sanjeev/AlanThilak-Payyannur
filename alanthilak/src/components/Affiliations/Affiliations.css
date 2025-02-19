@@ -1,10 +1,17 @@
-/* Affiliations.css */
+/* Affiliations Container */
 .affiliations-container {
     padding: 80px 20px;
     background: #f9f9f9;
 }
 
+/* Header inside Affiliations */
+.affiliations-container .header h1 {
+    font-size: clamp(2rem, 4vw, 2.5rem);
+    text-align: center;
+    margin-bottom: 40px;
+}
 
+/* Affiliations Grid */
 .affiliations-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
@@ -13,6 +20,7 @@
     margin: 0 auto;
 }
 
+/* Individual Affiliation Items */
 .affiliation-item {
     background: white;
     border-radius: 12px;
@@ -41,9 +49,14 @@
     filter: grayscale(100%);
 }
 
+/* Responsive Adjustments */
 @media (max-width: 768px) {
-    .affiliations-header h1 {
-        font-size: 2.2rem;
+    .affiliations-container {
+            padding: 60px 15px;
+        }
+    
+        .affiliations-container .header h1 {
+            font-size: clamp(1.8rem, 5vw, 2rem);
     }
 
     .affiliations-grid {
@@ -53,5 +66,18 @@
 
     .affiliation-item {
         padding: 20px;
+    }
+}
+@media (max-width: 480px) {
+    .affiliations-container {
+        padding: 40px 10px;
+    }
+
+    .affiliations-container .header h1 {
+        font-size: clamp(1.5rem, 6vw, 1.8rem);
+    }
+
+    .affiliations-grid {
+        gap: 20px;
     }
 }

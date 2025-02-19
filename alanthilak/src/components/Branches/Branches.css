@@ -1,5 +1,5 @@
 .branches-section {
-    padding: 80px 0;
+    padding: 80px 20px;
     background: #f8f9fa;
     text-align: center;
     cursor: pointer;
@@ -11,9 +11,10 @@
     padding: 0 20px;
 }
 
+
 .section-subtitle {
     color: #666;
-    font-size: 1.1rem;
+    font-size: clamp(1rem, 2vw, 1.1rem);
     margin-bottom: 40px;
 }
 
@@ -37,13 +38,13 @@
 }
 
 .branch-icon {
-    font-size: 2rem;
+    font-size: clamp(1.8rem, 3vw, 2rem);
     color: #e63946;
     margin-bottom: 15px;
 }
 
 .branch-card h3 {
-    font-size: 1.5rem;
+    font-size: clamp(1.4rem, 2vw, 1.5rem);
     color: #2a2a2a;
     margin-bottom: 10px;
     font-family: "Monda", sans-serif;
@@ -53,9 +54,10 @@
 .branch-card p {
     color: #666;
     line-height: 1.6;
-    font-size: 0.95rem;
+    font-size: clamp(0.9rem, 1vw, 0.95rem);
 }
 
+/* Responsive adjustments for smaller screens */
 @media (max-width: 768px) {
     .branches-grid {
         grid-template-columns: 1fr;

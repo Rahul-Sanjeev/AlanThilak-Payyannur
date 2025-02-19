@@ -8,7 +8,7 @@ const Footer = () => {
             <div className="footer-container container">
                 <div className="footer-grid">
                     <div className="footer-about">
-                        <h3>Alan Thilak Karate School</h3>
+                        <h3>Alan Thilak Karate School International</h3>
                         <p>Established in 1975, we are dedicated to teaching authentic Shito-Ryu Karate and fostering discipline, respect, and excellence in our students.</p>
                     </div>
 

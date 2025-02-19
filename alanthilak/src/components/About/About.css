@@ -44,14 +44,15 @@
 }
 
 .founder-details h3 {
-    font-size: 2rem;
+    font-size: clamp(1.8rem, 2vw, 2rem);
     color: #2a2a2a;
     margin-bottom: 10px;
     font-family: "Monda", sans-serif;
     font-weight: 600;
 }
+
 .founder-details h6 {
-    font-size: .9rem;
+    font-size: clamp(0.8rem, 1vw, 0.9rem);
     color: #1b1bb1;
     margin-bottom: 10px;
     font-family: "Monda", sans-serif;
@@ -60,7 +61,7 @@
 
 .founder-title {
     color: #e63946;
-    font-size: 1.1rem;
+    font-size: clamp(1rem, 1.2vw, 1.1rem);
     margin-bottom: 20px;
     font-weight: 500;
 }
@@ -68,7 +69,7 @@
 .founder-description {
     color: #666;
     line-height: 1.8;
-    font-size: 1rem;
+    font-size: clamp(0.9rem, 1vw, 1rem);
 }
 
 /* Stats Section */
@@ -93,7 +94,7 @@
 }
 
 .stat-number {
-    font-size: 2.5rem;
+    font-size: clamp(2rem, 3vw, 2.5rem);
     font-weight: bold;
     color: #e63946;
     margin-bottom: 10px;
@@ -101,7 +102,7 @@
 
 .stat-label {
     color: #666;
-    font-size: 1rem;
+    font-size: clamp(0.9rem, 1vw, 1rem);
 }
 
 /* Training Section */
@@ -117,7 +118,7 @@
 }
 
 .training-content h3 {
-    font-size: 2rem;
+    font-size: clamp(1.8rem, 2vw, 2rem);
     color: #2a2a2a;
     margin-bottom: 20px;
     font-family: "Monda", sans-serif;
@@ -128,6 +129,7 @@
     color: #666;
     line-height: 1.8;
     margin-bottom: 20px;
+    font-size: clamp(0.9rem, 1vw, 1rem);
 }
 
 .training-content ul {
@@ -140,6 +142,7 @@
     padding-left: 25px;
     position: relative;
     color: #666;
+    font-size: clamp(0.9rem, 1vw, 1rem);
 }
 
 .training-content li::before {
@@ -190,7 +193,7 @@
 }
 
 .global-content h3 {
-    font-size: 2rem;
+    font-size: clamp(1.8rem, 2vw, 2rem);
     color: #2a2a2a;
     margin-bottom: 20px;
     font-family: "Monda", sans-serif;
@@ -200,6 +203,7 @@
 .global-content p {
     color: #666;
     line-height: 1.8;
+    font-size: clamp(0.9rem, 1vw, 1rem);
 }
 
 /* Call to Action */
@@ -207,8 +211,8 @@
     text-align: center;
     margin-top: 40px;
 }
-.cta-section p{
-    font-size: 1.4rem;
+.cta-section p {
+    font-size: clamp(1.2rem, 2vw, 1.4rem);
     color: #666;
     margin-bottom: 30px;
 }
@@ -219,36 +223,76 @@
     padding: 15px 40px;
     border: none;
     border-radius: 30px;
-    font-size: 1.1rem;
+    font-size: clamp(1rem, 1vw, 1.1rem);
     cursor: pointer;
     transition: all 0.3s ease;
 }
 
 .cta-button:hover {
-    background: #d62828;
+    background: rgb(246, 246, 7);
+        color: black;
     transform: translateY(-3px);
 }
 
 /* Responsive Design */
+@media (max-width: 992px) {
+
+    /* For tablets: change stats grid to two columns */
+    .stats-section {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
 @media (max-width: 768px) {
 
     .founder-section,
     .training-section,
     .global-section {
         flex-direction: column;
+        gap: 20px;
+        }
+        
+        .founder-image,
+        .training-image,
+        .global-image {
+            width: 100%;
+            max-width: 100%;
+            height: auto;
+        }
+        
+        /* Adjust image heights for mobile */
+        .founder-image {
+            height: 40vh;
+        }
+        
+        .training-image,
+        .global-image {
+            height: 30vh;
     }
 
     .stats-section {
         grid-template-columns: 1fr;
     }
+}
 
-    .founder-image,
-    .training-image,
-    .global-image {
-        width: 100%;
+@media (max-width: 480px) {
+    .about-container {
+        padding: 0 10px;
     }
 
-    .about-header h2 {
-        font-size: 2.2rem;
+                                                                                                                                .founder-details h3 {
+                                                                                                                                    font-size: 1.6rem;
+    }
+
+                                                                                                                                .founder-details h6 {
+                                                                                                                                    font-size: 0.8rem;
+                                                                                                                                }
+                                                                
+                                                                                                                                .cta-section p {
+                                                                                                                                    font-size: 1rem;
+                                                                                                                                }
+                                                                
+                                                                                                                                .cta-button {
+                                                                                                                                    padding: 10px 30px;
+                                                                                                                                    font-size: 1rem;
     }
 }

@@ -1,9 +1,20 @@
-/* Services.css */
 .services-container {
-    padding: 80px 0;
+    padding: 80px 20px;
     background: #f9f9f9;
 }
 
+/* Header Styles */
+.header {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.header h1 {
+    font-size: clamp(2rem, 4vw, 2.5rem);
+}
+
+
+/* Services Grid */
 .services-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -13,11 +24,12 @@
     padding: 0 20px;
 }
 
+/* Service Card */
 .service-card {
     background: white;
     border-radius: 15px;
     padding: 25px;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease;
     text-align: center;
 }
@@ -26,6 +38,7 @@
     transform: translateY(-10px);
 }
 
+/* Image Container */
 .image-container {
     width: 200px;
     height: 200px;
@@ -33,7 +46,7 @@
     border-radius: 41%;
     overflow: hidden;
     position: relative;
-    box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
 }
 
 .image-container img {
@@ -47,29 +60,64 @@
     transform: scale(1.1);
 }
 
+/* Card Text */
 .service-card h3 {
     color: #2a2a2a;
     margin: 15px 0;
-    font-size: 1.5rem;
+    font-size: clamp(1.4rem, 2vw, 1.5rem);
 }
 
 .service-card p {
     color: #666;
     line-height: 1.6;
-    font-size: 1rem;
+    font-size: clamp(0.9rem, 1vw, 1rem);
     margin-bottom: 15px;
     max-width: 300px;
     margin-left: auto;
     margin-right: auto;
 }
 
+/* Responsive Adjustments */
 @media (max-width: 768px) {
     .services-grid {
         grid-template-columns: 1fr;
         max-width: 500px;
     }
-    
+
     .service-card {
         margin-bottom: 30px;
+    }
+.image-container {
+    width: 180px;
+    height: 180px;
+}
+}
+
+@media (max-width: 480px) {
+    .services-container {
+        padding: 60px 10px;
+    }
+
+    .header h1 {
+        font-size: clamp(1.8rem, 5vw, 2rem);
+    }
+
+    .services-grid {
+        padding: 0 10px;
+        gap: 20px;
+    }
+
+    .service-card {
+        padding: 20px;
+    }
+
+    .image-container {
+        width: 150px;
+        height: 150px;
+    }
+
+    .service-card p {
+        max-width: 100%;
+        font-size: clamp(0.8rem, 1vw, 0.9rem);
     }
 }

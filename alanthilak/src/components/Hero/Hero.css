@@ -6,39 +6,63 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    /* The background gradient here is optional since we’re adding an overlay */
     background: linear-gradient(rgba(8, 0, 58, 0.1), rgba(8, 0, 58, 0.1));
-    background-size: cover;
-    background-position: center;
     color: #fff;
 }
 
+/* Slider Container fills the hero area */
 .slider-container {
     position: absolute;
     width: 100%;
     height: 100%;
+    top: 0;
+        left: 0;
 }
 
+/* Each slide occupies the full container */
 .slide {
     position: absolute;
     width: 100%;
     height: 100%;
-    background-size: cover;
-    background-position: center;
     opacity: 0;
     transition: opacity 1s ease-in-out;
 }
 
+/* Only the active slide is visible */
 .slide.active {
     opacity: 1;
 }
 
+/* Image styling to mimic gallery.css behavior */
+.slide-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+/* Gradient overlay on each slide */
+.slide::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(rgba(8, 0, 58, 0.5), rgba(8, 0, 58, 0.5));
+    z-index: 1;
+}
+
+/* Content overlay (above slides) */
 .hero-text {
     position: relative;
-    z-index: 1;
+    z-index: 2;
     text-align: center;
     max-width: 800px;
-    color: #fff;
     padding-top: 45vh;
+    display: flex;
+        flex-direction: column;
     align-items: center;
     justify-content: center;
 }
@@ -55,7 +79,45 @@
     line-height: 1.4;
 }
 
-.down_arrow{
+.down_arrow {
     height: 4vh;
     cursor: pointer;
+}
+/* Responsive adjustments */
+@media screen and (max-width: 768px) {
+    .hero-text {
+        padding-top: 30vh;
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    .hero-text h1 {
+        font-size: 30px;
+        letter-spacing: 1.5px;
+    }
+
+    .hero-text p {
+        font-size: 16px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .hero-text {
+        padding-top: 25vh;
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+
+    .hero-text h1 {
+        font-size: 24px;
+        letter-spacing: 1px;
+    }
+
+    .hero-text p {
+        font-size: 14px;
+    }
+
+    .down_arrow {
+        height: 3.5vh;
+    }
 }

@@ -17,10 +17,11 @@
     margin-bottom: 40px;
 }
 
+/* Headings in footer sections */
 .footer-about h3,
 .footer-contact h3,
 .footer-links h3 {
-    font-size: 1.5rem;
+    font-size: clamp(1.4rem, 2vw, 1.5rem);
     margin-bottom: 20px;
     font-family: "Monda", sans-serif;
     font-weight: 600;
@@ -29,9 +30,10 @@
 .footer-about p {
     color: #ccc;
     line-height: 1.6;
-    font-size: 0.95rem;
+    font-size: clamp(0.9rem, 1vw, 0.95rem);
 }
 
+/* Lists for contact and links */
 .footer-contact ul,
 .footer-links ul {
     list-style: none;
@@ -44,6 +46,7 @@
     display: flex;
     align-items: center;
     line-height: 1.5rem;
+    font-size: clamp(0.9rem, 1vw, 0.95rem);
 }
 
 .footer-icon {
@@ -67,9 +70,10 @@
     padding-top: 20px;
     margin-top: 40px;
     color: #ccc;
-    font-size: 0.9rem;
+    font-size: clamp(0.8rem, 1vw, 0.9rem);
 }
 
+/* Developer Credits */
 .developer-credits {
     margin-top: 10px;
     display: flex;
@@ -88,7 +92,7 @@
 }
 
 .developer-icon {
-    font-size: 1.2rem;
+    font-size: clamp(1rem, 1.5vw, 1.2rem);
     color: #ccc;
     transition: color 0.3s ease;
 }
@@ -97,8 +101,16 @@
     color: #e63946;
 }
 
+/* Responsive Adjustment */
 @media (max-width: 768px) {
     .footer-grid {
         grid-template-columns: 1fr;
     }
+.footer-section h3,
+.footer-links,
+.footer-links li {
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
 }

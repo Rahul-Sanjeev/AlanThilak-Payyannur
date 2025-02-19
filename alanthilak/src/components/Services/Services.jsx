@@ -9,7 +9,6 @@ const Services = () => {
         <div id='services' className="services-container">
             <div className='header'>
                 <h1>Our Services</h1>
-                <div className="header-underline"></div>
             </div>
 
             <div className='services-grid'>
