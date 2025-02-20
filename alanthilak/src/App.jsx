@@ -8,6 +8,7 @@ import Footer from './components/Footer/Footer'
 import Branches from './components/Branches/Branches'
 import Leadership from './components/Leadership/Leadership'
 import Gallery from './components/Gallery/Gallery'
+import Instructors from './components/Instructors/Instructors'
 
 const App = () => {
     return (
@@ -21,6 +22,7 @@ const App = () => {
             <Services />
             <Gallery />
             <Branches />
+            {/* <Instructors /> */}
             <Socials />
             <Footer />
         </div>
