@@ -1,5 +1,8 @@
 import './Socials.css';
-import { FaFacebook, FaInstagram, FaMailBulk, FaMailchimp, FaPhone, FaYoutube } from 'react-icons/fa';
+import { FaFacebook, FaInstagram, FaPhone, FaYoutube } from 'react-icons/fa';
+import { SiGmail } from "react-icons/si";
+import { BsFillTelephoneFill } from "react-icons/bs";
+
 
 const Socials = () => {
     return (
@@ -10,11 +13,11 @@ const Socials = () => {
 
                 <div className="social-icons">
                     <a href="tel:+919526152158" target="_blank" rel="noopener noreferrer" className="social-link">
-                        <FaPhone className="social-icon" />
+                        <BsFillTelephoneFill className="social-icon" />
                         <span>Phone</span>
                     </a>
-                    <a href="mailto:anjanakarate007@gmail.com" target="_blank" rel="noopener noreferrer" className="social-link">
-                        <FaMailBulk className="social-icon" />
+                    <a href="mailto:alanthilakpayyanur@gmail.com" target="_blank" rel="noopener noreferrer" className="social-link">
+                        <SiGmail className="social-icon" />
                         <span>Mail</span>
                     </a>
                 </div>

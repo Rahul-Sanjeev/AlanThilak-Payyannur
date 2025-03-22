@@ -17,7 +17,7 @@ const Footer = () => {
                         <ul>
                             <li>
                                 <FaMapMarkerAlt className="footer-icon" />
-                                <span>City Center, Main Road Payyannur, Payyanur, Kannur - 670307 <br /> (Opposite St. Mary Girls Higher Secondery School)</span>
+                                <span>City Center, Main Road Payyannur, Payyanur, Kannur - 670307 <br /> (Opposite St. Mary Girls High School)</span>
                             </li>
                             <li>
                                 <FaPhone className="footer-icon" />
@@ -25,7 +25,7 @@ const Footer = () => {
                             </li>
                             <li>
                                 <FaEnvelope className="footer-icon" />
-                                <span>anjanakarate007@gmail.com</span>
+                                <span>alanthilakpayyanur@gmail.com</span>
                             </li>
                         </ul>
                     </div>

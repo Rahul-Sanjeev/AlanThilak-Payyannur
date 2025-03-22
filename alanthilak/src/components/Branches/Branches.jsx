@@ -10,17 +10,37 @@ const Branches = () => {
         },
         {
             city: 'Mathil',
-            address: '456 Martial Arts Road, Bangalore, Karnataka',
+            address: 'Govt. High Secondry School, Mathil, Kannur, Kerala - 670307',
             coordinates: '12.9716,77.5946' // Latitude and Longitude for Bangalore
         },
         {
-            city: 'Mumbai',
-            address: '789 Dojo Lane, Mumbai, Maharashtra',
+            city: 'Mandoor',
+            address: 'Naniyil Building, Mandoor, Pilathara - 670501',
             coordinates: '19.0760,72.8777' // Latitude and Longitude for Mumbai
         },
         {
-            city: 'Delhi',
-            address: '101 Sensei Avenue, Delhi',
+            city: 'Udinur',
+            address: 'Govt. High Secondry School, Udinur, Kasaragod, Kerala - 671310',
+            coordinates: '28.7041,77.1025' // Latitude and Longitude for Delhi
+        },
+        {
+            city: 'Padne',
+            address: 'Cap Sports Center, Padne, Kasaragod, Kerala - 671312',
+            coordinates: '28.7041,77.1025' // Latitude and Longitude for Delhi
+        },
+        {
+            city: 'Thaliparamba',
+            address: 'Opposite Ackiparamba U.P School, Chiravakku, Kannur, Kerala - 670141',
+            coordinates: '28.7041,77.1025' // Latitude and Longitude for Delhi
+        },
+        {
+            city: 'Karivellur',
+            address: 'Samskarika Vedi, Manakkad, Kannur, Kerala - 670521',
+            coordinates: '28.7041,77.1025' // Latitude and Longitude for Delhi
+        },
+        {
+            city: 'Eramam',
+            address: 'Kannappallipoyil Vayanasala & Granthalayam, Eramam, Kannur, Kerala - 670307',
             coordinates: '28.7041,77.1025' // Latitude and Longitude for Delhi
         },
     ];

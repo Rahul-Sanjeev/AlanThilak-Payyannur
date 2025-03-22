@@ -23,8 +23,6 @@ const Leadership = () => {
                             <ul className="leader-achievements">
                                 <li>6th Dan Black Belt ShitoRyu</li>
                                 <li>Technical Director, Alan Thilak Martial Arts Academy</li>
-                                <li>Joint Secretary, Karate Association of India (KAI)</li>
-                                <li>President, Kerala Karate Association</li>
                                 <li>Directing Committee Member, Kobe Osaka India</li>
                                 <li>Shihan Thilak Ha ShitoRyu</li>
                             </ul>
@@ -43,7 +41,7 @@ const Leadership = () => {
                                 <li>7th Dan Black Belt ShitoRyu</li>
                                 <li>6th Dan Black Belt WKF</li>
                                 <li>WKF Judge</li>
-                                <li>Vice President, Kerala Karate Association</li>
+                                <li>Referee Council Chairman, Kerala Karate Association (KKA)</li>
                                 <li>Directing Committee Member, Kobe Osaka India</li>
                                 <li>Hanshi Thilak Ha ShitoRyu</li>
                             </ul>
@@ -60,9 +58,9 @@ const Leadership = () => {
                             <ul className="leader-achievements">
                                 <li>5th Dan Black Belt ShitoRyu</li>
                                 <li>AKF Coach</li>
-                                <li>Vice President, Kerala Karate Association</li>
-                                <li>Directing Committee Member, Kobe Osaka India</li>
-                                <li>Hanshi Thilak Ha ShitoRyu</li>
+                                <li>Vice President, Kerala Karate Association (KKA)</li>
+                                <li>Vice President, Kanuur District Olympic Association</li>
+                                <li>General Secretary, Kannur District Sports Karate Association</li>
                             </ul>
                         </div>
                     </div>
@@ -75,11 +73,11 @@ const Leadership = () => {
                             <h3>Anand Maniyeri</h3>
                             <p className="leader-title">Team Coach</p>
                             <ul className="leader-achievements">
-                                <li>4th Dan Black Belt ShitoRyu</li>
-                                <li>KKA Coach</li>
-                                <li>Vice President, Kerala Karate Association</li>
-                                <li>Directing Committee Member, Kobe Osaka India</li>
-                                <li>Hanshi Thilak Ha ShitoRyu</li>
+                                <li>3th Dan Black Belt ShitoRyu</li>
+                                <li>Kerala Karate Association (KKA) Coach</li>
+                                <li>Vice President, Kerala Karate Association (KKA)</li>
+                                <li>Joint Secretary, Kasaragod District Karate Association (KDKA)</li>
+                                <li>APJ Abdul Kalam Kerala Technological University Coach</li>
                             </ul>
                         </div>
                     </div>

@@ -39,9 +39,9 @@ const Services = () => {
                     <div className="image-container">
                         <img src={Self_Defense} alt='Self Defence' />
                     </div>
-                    <h3>SELF DEFENSE</h3>
+                    <h3>SELF DEFENCE</h3>
                     <p>
-                        Self-defense in karate emphasizes practical techniques to protect oneself in real-life situations.
+                        Self-defence in karate emphasizes practical techniques to protect oneself in real-life situations.
                         It focuses on quick reactions, awareness, and effective movements to neutralize threats while building confidence and safety skills.
                     </p>
                 </div>
