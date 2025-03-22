@@ -17,7 +17,7 @@ const Footer = () => {
                         <ul>
                             <li>
                                 <FaMapMarkerAlt className="footer-icon" />
-                                <span>City Center, Main Road Payyannur, Payyanur, Kannur - 670307 <br /> (Opposite St. Mary Girls High School)</span>
+                                <span>City Center, Main Road Payyanur, Payyanur, Kannur - 670307 <br /> (Opposite St. Mary Girls High School)</span>
                             </li>
                             <li>
                                 <FaPhone className="footer-icon" />
