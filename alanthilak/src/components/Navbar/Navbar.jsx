@@ -3,6 +3,7 @@ import { Link } from 'react-scroll';
 import './Navbar.css';
 import Logo from '../../assets/ATKSI-Logo.svg';
 
+
 const Navbar = ({ audioElement }) => {
     const [isOpen, setIsOpen] = useState(false);
     const [showNavbar, setShowNavbar] = useState(true);
@@ -47,10 +48,13 @@ const Navbar = ({ audioElement }) => {
                 <span>
                     ALAN THILAK KARATE SCHOOL INTERNATIONAL PAYYANUR
                 </span>
+                {/* Custom hamburger using Remix Icon */}
                 <div className="hamburger" onClick={toggleMenu}>
-                    <div className={`bar ${isOpen ? 'open' : ''}`}></div>
-                    <div className={`bar ${isOpen ? 'open' : ''}`}></div>
-                    <div className={`bar ${isOpen ? 'open' : ''}`}></div>
+                    {isOpen ? (
+                        <i class="ri-menu-4-line"></i>
+                    ) : (
+                        <i class="ri-menu-5-line"></i>
+                    )}
                 </div>
             </div>
             <ul className={`nav-links ${isOpen ? 'open' : ''}`}>
@@ -133,10 +137,10 @@ const Navbar = ({ audioElement }) => {
                     </Link>
                 </li>
             </ul>
-            {/* Moved audio indicator outside of the nav-links list */}
+            {/* Audio indicator remains unchanged */}
             <div className="audio-indicator-wrapper" onClick={toggleAudio}>
                 <div className={`audio-indicator ${isAudioPlaying ? 'active' : ''}`}>
-                    {[1, 2, 3, 4].map((bar, i) => (
+                    {[1, 2, 3, 4, 5, 6].map((bar, i) => (
                         <div
                             key={i}
                             className="indicator-line"
