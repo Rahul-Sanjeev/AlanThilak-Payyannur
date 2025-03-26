@@ -17,7 +17,7 @@ const App = () => {
     const [audioElement, setAudioElement] = useState(null);
 
     const handleUnlock = () => {
-        const audio = new Audio(AudioFile); // Use the imported audio file
+        const audio = new Audio(AudioFile); // Create a single audio instance
         audio.loop = true;
 
         audio.play()

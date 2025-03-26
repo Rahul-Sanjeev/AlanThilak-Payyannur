@@ -2,21 +2,20 @@ import React, { useEffect, useRef, useState } from 'react';
 import { Link } from 'react-scroll';
 import './Navbar.css';
 import Logo from '../../assets/ATKSI-Logo.svg';
-import { FaPlay, FaPause } from 'react-icons/fa';
-import AudioFile from '../../assets/Audio/ATKSI-Audio.mp3';
 
 const Navbar = ({ audioElement }) => {
     const [isOpen, setIsOpen] = useState(false);
     const [showNavbar, setShowNavbar] = useState(true);
     const [isScrolled, setIsScrolled] = useState(false);
     const lastScrollY = useRef(0);
-
     const [isAudioPlaying, setIsAudioPlaying] = useState(true);
 
     const toggleMenu = () => setIsOpen(!isOpen);
     const closeMenu = () => setIsOpen(false);
 
+    // Toggle audio play/pause using the indicator as control.
     const toggleAudio = () => {
+        if (!audioElement) return; // ensure audioElement is defined
         if (isAudioPlaying) {
             audioElement.pause();
         } else {
@@ -25,7 +24,7 @@ const Navbar = ({ audioElement }) => {
         setIsAudioPlaying(!isAudioPlaying);
     };
 
-    // Hide navbar on scroll down, show on scroll up
+    // Hide navbar on scroll down, show on scroll up.
     useEffect(() => {
         const handleScroll = () => {
             const heroHeight = window.innerHeight;
@@ -41,10 +40,8 @@ const Navbar = ({ audioElement }) => {
         return () => window.removeEventListener('scroll', handleScroll);
     }, []);
 
-
     return (
         <nav className={`container ${showNavbar ? 'nav-show' : 'nav-hide'} ${isScrolled ? 'scrolled' : ''}`}>
-            <audio src={AudioFile} loop autoPlay muted />
             <div className="logo-section">
                 <img className="logo" src={Logo} alt="atksi-logo" />
                 <span>
@@ -135,12 +132,19 @@ const Navbar = ({ audioElement }) => {
                         Contact
                     </Link>
                 </li>
-                <li>
-                    <button onClick={toggleAudio} className="music-control">
-                        {isAudioPlaying ? <FaPause /> : <FaPlay />}
-                    </button>
-                </li>
             </ul>
+            {/* Moved audio indicator outside of the nav-links list */}
+            <div className="audio-indicator-wrapper" onClick={toggleAudio}>
+                <div className={`audio-indicator ${isAudioPlaying ? 'active' : ''}`}>
+                    {[1, 2, 3, 4].map((bar, i) => (
+                        <div
+                            key={i}
+                            className="indicator-line"
+                            style={{ animationDelay: `${i * 0.1}s` }}
+                        />
+                    ))}
+                </div>
+            </div>
         </nav>
     );
 };

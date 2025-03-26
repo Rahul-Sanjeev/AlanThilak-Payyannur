@@ -11,9 +11,8 @@ nav {
     align-items: center;
     justify-content: space-between;
     width: 100%;
-    height: 13vh;
+    height: 19vh;
     padding: 0 6%;
-    /* Uses side padding from your container */
     background: linear-gradient(rgba(8, 0, 58, 0.3), rgba(8, 0, 58, 0.3));
     color: #fff;
     position: fixed;
@@ -21,7 +20,7 @@ nav {
     left: 0;
     z-index: 10;
     box-shadow: none;
-        backdrop-filter: none;
+    backdrop-filter: none;
         transition: all 0.3s ease-in-out;
 }
 
@@ -38,6 +37,7 @@ nav.scrolled {
     backdrop-filter: blur(8px);
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
 }
+
 /* Logo Section */
 .logo-section {
     display: flex;
@@ -46,13 +46,11 @@ nav.scrolled {
     gap: 1rem;
 }
 
-/* Logo image auto-adjusts its height between 40px and 100px */
 .logo {
     height: clamp(40px, 9.9vh, 100px);
     width: auto;
 }
 
-/* Text next to the logo scales with viewport width */
 .logo-section span {
     font-size: clamp(0.8rem, 1vw, 1.2rem);
     letter-spacing: 1px;
@@ -84,38 +82,66 @@ nav>ul>li a:hover {
     color: rgb(239, 84, 84);
 }
 
-/* Music control */
-.music-control {
-    background: none;
-    border: none;
-    color: white;
-    font-size: 1.2rem;
+/* Audio Indicator (acts as toggle control) */
+.audio-indicator-wrapper {
     cursor: pointer;
+    height: 20px;
+        overflow: hidden;
+    }
+    
+    .audio-indicator {
+        display: flex;
+        gap: 2px;
+        align-items: center;
     padding: 5px;
-    margin-left: 1rem;
 }
-/* Hide hamburger on desktop */
+
+.indicator-line {
+    width: 4px;
+    height: 10px;
+    background-color: white;
+    animation: pulse 1s infinite;
+    animation-play-state: paused;
+}
+
+.audio-indicator.active .indicator-line {
+    animation-play-state: running;
+}
+
+@keyframes pulse {
+
+    0%,
+    100% {
+        height: 10px;
+    }
+
+    50% {
+        height: 20px;
+    }
+}
+/* Hamburger (Mobile) */
 .hamburger {
     display: none;
 }
 
+/* Nav Controls Container */
+.nav-controls {
+    display: flex;
+    align-items: center;
+}
 /* ---------------- Mobile Styles ---------------- */
 @media screen and (max-width: 768px) {
-
-    /* Change nav layout for mobile */
     nav {
         flex-direction: column;
         height: auto;
         padding: 10px 6%;
     }
 
-    /* Adjust logo section to keep logo on left and hamburger on right */
     .logo-section {
         width: 100%;
         justify-content: space-between;
     }
 
-    /* Show hamburger icon on mobile */
     .hamburger {
         display: flex;
         flex-direction: column;
@@ -133,7 +159,6 @@ nav>ul>li a:hover {
         transition: all 0.3s ease;
     }
 
-    /* Animate hamburger into a cross when open */
     .hamburger .bar.open:nth-child(1) {
         transform: translateY(10px) rotate(45deg);
     }
@@ -155,10 +180,8 @@ nav>ul>li a:hover {
         padding: 10px 0;
         margin-top: 10px;
         display: none;
-        /* hidden by default */
     }
 
-    /* Show mobile menu when hamburger is active */
     nav>ul.open {
         display: flex;
     }
@@ -166,7 +189,5 @@ nav>ul>li a:hover {
     nav>ul>li {
         margin: 10px 0;
     }
-.music-control {
-    margin: 10px 0;
-}
+
 }
