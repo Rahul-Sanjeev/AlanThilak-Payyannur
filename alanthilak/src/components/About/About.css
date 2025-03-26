@@ -91,6 +91,7 @@
 
 .stat-item:hover {
     transform: translateY(-10px);
+    background-color: rgb(203, 203, 22);
 }
 
 .stat-number {

@@ -9,7 +9,7 @@ const About = () => {
         <section id='about' className="about-section">
             <div className="about-container container">
                 <div className="header">
-                    <h1>About Alan Thilak Karate School</h1>
+                    <h1>Alan Thilak Karate School International</h1>
                 </div>
 
                 <div className="about-content">

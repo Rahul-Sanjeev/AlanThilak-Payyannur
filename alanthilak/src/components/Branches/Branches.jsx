@@ -6,56 +6,79 @@ const Branches = () => {
         {
             city: 'Payyanur',
             address: 'City Center, Main Road Payyannur, Kannur, Kerala - 670307',
-            coordinates: '12.1051748,75.2052757' // Latitude and Longitude for Payyanur
+            mapLink: 'https://maps.app.goo.gl/ZXuGrdwjpbGZG2hQ7?g_st=aw'
         },
         {
             city: 'Mathil',
             address: 'Govt. High Secondry School, Mathil, Kannur, Kerala - 670307',
-            coordinates: '12.9716,77.5946' // Latitude and Longitude for Bangalore
+            mapLink: 'https://maps.app.goo.gl/JeDLysJM1mahK5Ls5?g_st=aw'
         },
         {
             city: 'Mandoor',
             address: 'Naniyil Building, Mandoor, Pilathara - 670501',
-            coordinates: '19.0760,72.8777' // Latitude and Longitude for Mumbai
+            mapLink: 'https://maps.app.goo.gl/F2p4SRtjXksitruA7?g_st=aw'
         },
         {
             city: 'Udinur',
             address: 'Govt. High Secondry School, Udinur, Kasaragod, Kerala - 671310',
-            coordinates: '28.7041,77.1025' // Latitude and Longitude for Delhi
+            mapLink: 'https://maps.app.goo.gl/8MyguHNw8rxLLEQZA'
         },
         {
             city: 'Padne',
             address: 'Cap Sports Center, Padne, Kasaragod, Kerala - 671312',
-            coordinates: '28.7041,77.1025' // Latitude and Longitude for Delhi
+            mapLink: 'https://maps.app.goo.gl/zyFhs72cF1zSBYkx9'
         },
         {
             city: 'Thaliparamba',
             address: 'Opposite Ackiparamba U.P School, Chiravakku, Kannur, Kerala - 670141',
-            coordinates: '28.7041,77.1025' // Latitude and Longitude for Delhi
+            mapLink: ''
         },
         {
             city: 'Karivellur',
             address: 'Samskarika Vedi, Manakkad, Kannur, Kerala - 670521',
-            coordinates: '28.7041,77.1025' // Latitude and Longitude for Delhi
+            mapLink: 'https://maps.app.goo.gl/QvPahQXySNL7WjJ29?g_st=aw'
         },
         {
             city: 'Eramam',
             address: 'Kannappallipoyil Vayanasala & Granthalayam, Eramam, Kannur, Kerala - 670307',
-            coordinates: '28.7041,77.1025' // Latitude and Longitude for Delhi
+            mapLink: 'https://maps.app.goo.gl/YhVo2A5E3Y4H5h126'
+        },
+        {
+            city: 'Nadakkavu',
+            address: 'GLPS Maithani, Vaikkath, North Thrikkaripur, Kasaragod, Kerala - 671310',
+            mapLink: 'https://maps.app.goo.gl/RQP6p3hhBhdDa7aMA?g_st=aw'
+        },
+        {
+            city: 'Kuniyan',
+            address: 'Parambath Bhagavathi Kshethram L.P School (K K R Nair Memorial Aided L P School), Kuniyan Rd, Karivellur, Kerala - 671310',
+            mapLink: 'https://maps.app.goo.gl/3oTjWaMS3ktt8DoC9'
+        },
+        {
+            city: 'Periye',
+            address: 'Flowers, Periye, Kasargod, Kerala - 671316',
+            mapLink: 'https://maps.app.goo.gl/2tXMTFJtyZHBDSpe9'
+        },
+        {
+            city: 'Pariyaram',
+            address: 'Govt. Ayurveda Medical College Kannur, Pariyaram, Kannur, Kerala - 671316',
+            mapLink: 'https://maps.app.goo.gl/imx7Kkv8xjoFt6kx8'
+        },
+        {
+            city: 'Punnakkadavu',
+            address: 'Punnakkadavu, Vadakkumbad Ramanthali, Payyanur, Kannur, Kerala - 670308',
+            mapLink: 'https://maps.app.goo.gl/AzdVBgbGZ4hpWjs67?g_st=aw'
+        },
+        {
+            city: 'Karamel',
+            address: 'Karamel A.L.P School, Annur Road, Payyanur, Kannur, Kerala - 670307',
+            mapLink: 'https://maps.app.goo.gl/u2kgWk8D6xMqfyNi9?g_st=aw'
         },
     ];
 
-    // Function to open Google Maps or Apple Maps
-    const openMaps = (coordinates) => {
-        const isAppleDevice = /iPad|iPhone|iPod/.test(navigator.userAgent);
-        const [latitude, longitude] = coordinates.split(',');
-
-        if (isAppleDevice) {
-            // Open Apple Maps
-            window.open(`maps://maps.google.com/maps?q=${latitude},${longitude}`);
-        } else {
-            // Open Google Maps
-            window.open(`https://www.google.com/maps?q=${latitude},${longitude}`);
+    // Function to open Maps
+    const openMaps = (mapLink) => {
+        if (mapLink) {
+            window.open(mapLink, '_blank');
         }
     };
 
@@ -70,12 +93,18 @@ const Branches = () => {
                         <div
                             className="branch-card"
                             key={index}
-                            onClick={() => openMaps(branch.coordinates)}
-                            style={{ cursor: 'pointer' }} // Add pointer cursor
+                            onClick={() => openMaps(branch.mapLink)}
+                            style={{ cursor: 'pointer' }}
                         >
                             <FaMapMarkerAlt className="branch-icon" />
                             <h3>{branch.city}</h3>
                             <p>{branch.address}</p>
+                            {/* Show warning for missing links */}
+                            {!branch.mapLink &&
+                                <div className="map-link-warning">
+                                    (Map link coming soon)
+                                </div>
+                            }
                         </div>
                     ))}
                 </div>

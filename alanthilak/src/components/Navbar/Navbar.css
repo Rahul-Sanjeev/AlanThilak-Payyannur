@@ -3,14 +3,6 @@
     transition: transform 0.3s ease-in-out;
 }
 
-.nav-show {
-    transform: translateY(0);
-}
-
-.nav-hide {
-    transform: translateY(-100%);
-}
-
 /* ---------------- Global & Desktop Styles ---------------- */
 
 /* Nav Container with scroll transition */
@@ -22,13 +14,15 @@ nav {
     height: 13vh;
     padding: 0 6%;
     /* Uses side padding from your container */
-        background: linear-gradient(rgba(8, 0, 58, 0.3), rgba(8, 0, 58, 0.3));
+    background: linear-gradient(rgba(8, 0, 58, 0.3), rgba(8, 0, 58, 0.3));
     color: #fff;
     position: fixed;
     top: 0;
     left: 0;
     z-index: 10;
-    transition: transform 0.3s ease-in-out;
+    box-shadow: none;
+        backdrop-filter: none;
+        transition: all 0.3s ease-in-out;
 }
 
 /* Scroll show/hide classes */
@@ -40,6 +34,10 @@ nav {
     transform: translateY(-100%);
 }
 
+nav.scrolled {
+    backdrop-filter: blur(8px);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+}
 /* Logo Section */
 .logo-section {
     display: flex;
@@ -86,6 +84,16 @@ nav>ul>li a:hover {
     color: rgb(239, 84, 84);
 }
 
+/* Music control */
+.music-control {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 1.2rem;
+    cursor: pointer;
+    padding: 5px;
+    margin-left: 1rem;
+}
 /* Hide hamburger on desktop */
 .hamburger {
     display: none;
@@ -158,4 +166,7 @@ nav>ul>li a:hover {
     nav>ul>li {
         margin: 10px 0;
     }
+.music-control {
+    margin: 10px 0;
+}
 }
