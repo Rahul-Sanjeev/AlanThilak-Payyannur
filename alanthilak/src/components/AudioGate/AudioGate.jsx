@@ -21,7 +21,7 @@ const AudioGate = ({ onUnlock }) => {
                     Alan Thilak Karate School International <br /> Payyanur
                 </h1>
                 <button className="ag-enter-button" onClick={onUnlock}>
-                    Enter the Dojo
+                    Enter The Dojo
                 </button>
                 <p className="ag-instruction">Click to begin your journey</p>
             </div>
