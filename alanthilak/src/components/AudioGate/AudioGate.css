@@ -1,59 +1,83 @@
-.ag-audio-gate {
-    position: fixed;
-    top: 0;
-    left: 0;
+.affiliations-container {
+    padding: 4rem 0;
+    background: #f8f9fa;
+    position: relative;
+}
+
+
+.affiliations-marquee {
+    overflow: hidden;
+    position: relative;
     width: 100%;
-    height: 100vh;
-    background: rgba(8, 0, 58, 0.95);
-    z-index: 1000;
+    margin: 2rem 0;
+}
+
+.marquee-content {
     display: flex;
-    flex-direction: column;
     align-items: center;
-    justify-content: center;
-    backdrop-filter: blur(10px);
+    flex-shrink: 0;
+    padding-right: 4rem;
+    /* Space between sets */
 }
 
-.ag-logo-section {
-    text-align: center;
-    margin-bottom: 20px;
+.marquee-track {
+    display: flex;
+    width: max-content;
+    animation: marquee 30s linear infinite;
+    will-change: transform;
 }
 
-.ag-logo {
-    width: 150px;
-    height: auto;
-}
-
-.ag-logo-text {
-    color: white;
-    font-size: 1.5rem;
-    margin-top: 10px;
-}
-
-.ag-gate-content {
-    text-align: center;
-    color: white;
-}
-
-.ag-enter-button {
-    background: #ef5454;
-    border: none;
-    padding: 15px 40px;
-    font-size: 1.2rem;
-    color: white;
-    border-radius: 30px;
-    cursor: pointer;
+.affiliation-item {
+    flex-shrink: 0;
+    margin: 0 2rem;
+    padding: 1rem;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease;
-    margin-top: 20px;
 }
 
-.ag-enter-button:hover {
-    transform: scale(1.05);
-    background-color: yellow;
-    color: black;
+.affiliation-item:hover {
+    transform: translateY(-5px);
 }
 
-.ag-instruction {
-    margin-top: 20px;
-    opacity: 0.8;
-    font-size: 0.9rem;
+.affiliation-item img {
+    height: 80px;
+    width: auto;
+    max-width: 200px;
+    object-fit: contain;
+}
+
+.section-underline {
+    height: 2px;
+    background: #e0e0e0;
+    width: 80%;
+    margin: 2rem auto 0;
+}
+
+@keyframes marquee {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(calc(-100% - 4rem));
+    }
+}
+
+.affiliations-marquee:hover .marquee-track {
+    animation-play-state: paused;
+}
+
+@media (max-width: 768px) {
+    .affiliation-item {
+        margin: 0 2rem;
+    }
+
+    .affiliation-item img {
+        height: 60px;
+    }
+
+    .marquee-content {
+        animation-duration: 40s;
+    }
 }
