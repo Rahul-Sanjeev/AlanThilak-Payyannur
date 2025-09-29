@@ -33,9 +33,7 @@ const App = () => {
 
     return (
         <div>
-            (
-            {/* <AudioGate onUnlock={handleUnlock} /> */}
-            ) : (
+
                 <>
                 <Navbar />
                     <Hero />
@@ -45,10 +43,10 @@ const App = () => {
                     <Services />
                     <Gallery />
                     <Branches />
-                        <Socials />
-                        <Footer />
+                <Socials />
+                <Footer />
                 </>
-            )
+
         </div>
     );
 };
